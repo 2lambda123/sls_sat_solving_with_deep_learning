@@ -21,8 +21,7 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+        run: python --version
         
       - name: Install minimal stable RUST with clippy and rustfmt
         uses: actions-rs/toolchain@v1
@@ -33,10 +32,8 @@ jobs:
           
       - name: Install dependencies and run pytest
         run: |
-          pip install virtualenv
+          python --version
           virtualenv venv
           source venv/bin/activate
           pip install -r requirements.txt
-          # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
-          maturin develop -r
           pytest python/tests/.
