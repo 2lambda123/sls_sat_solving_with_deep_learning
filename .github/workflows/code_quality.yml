@@ -37,5 +37,5 @@ jobs:
 
     - name: Install and run pre-commit hook
       run: |
-          pre-commit install
+                    pre-commit install
           pre-commit run --all-files
