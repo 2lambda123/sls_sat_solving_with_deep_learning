@@ -32,7 +32,7 @@ jobs:
 
     - name: Install and run precommit hook
       run: |
-          pip install pre-commit
+          pip install --no-cache-dir --upgrade pre-commit
           
 
     - name: Install and run pre-commit hook
