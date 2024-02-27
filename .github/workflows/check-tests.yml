@@ -39,4 +39,4 @@ jobs:
           pip install -r requirements.txt
           # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
           maturin develop -r
-          pytest python/tests/.
+          python -m pytest python/tests/.
